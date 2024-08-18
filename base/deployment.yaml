@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: myapp
-        image: oukchiren/myapp:cbeee170044952b6ffbdbcfee85397018be153ce
+        image: oukchiren/myapp:2480283ab64fefc1b867e8bf272d4f7b711ee1f8
         ports:
         - containerPort: 3000
