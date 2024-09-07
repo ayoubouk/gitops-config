@@ -4,4 +4,4 @@ bases:
 - ../../base
 images:
 - name: oukchiren/myapp
-  newTag: default
+  newTag: 96ccd18
