@@ -12,7 +12,7 @@ spec:
     # Name of a secret used to store the ACME account private key
     privateKeySecretRef:
       name: letsencrypt-campus
-    # Enable the HTTP-01 challenge provider
+    
     solvers:
       - http01:
           ingress:
