@@ -1,0 +1,28 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: health-app-ingress
+  labels:
+    app.kubernetes.io/component: health-app-ingress
+    app.kubernetes.io/instance: health-app-ingress
+  annotations:
+    cert-manager.io/issuer: letsencrypt-campus
+    kubernetes.io/ingress.class: nginx
+    kubernetes.io/tls-acme: 'true'
+spec:
+  tls:
+   - hosts:
+      - health-app.campus.clusterdiali.me
+     secretName: health-app.campus.clusterdiali.me-tls
+  rules:
+  - host: health-app.campus.clusterdiali.me
+    http:
+      paths:
+      - path: /
+        pathType: ImplementationSpecific
+        backend:
+          service:
+            name: saas-health-service 
+            port:
+              name: http
+   
