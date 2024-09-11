@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: myapp
+  name: saas-health-frontend
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: myapp
+      app: saas-health-frontend
   template:
     metadata:
       labels:
-        app: myapp
+        app: saas-health-frontend
     spec:
       containers:
-      - name: myapp
+      - name: saas-health-frontend
         image: oukchiren/myapp:f95f4b40401706163cc3f38b7bbdd3343a5a70ff
         ports:
         - containerPort: 3000
